@@ -14,6 +14,6 @@ import { Hello } from '../modules/hello';
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+    document.body.appendChild(document.createElement('div'))
+  );
+});
