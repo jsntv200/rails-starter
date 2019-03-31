@@ -8,12 +8,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactOnRails from 'react-on-rails';
 
 import { Hello } from '../modules/hello';
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div'))
-  );
+// Components that use hooks need to be wrapped in a function
+// https://github.com/shakacode/react_on_rails/issues/1198#issuecomment-475689587
+ReactOnRails.register({
+  Hello: (props) => <Hello {...props} />,
 });
